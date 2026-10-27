@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>Simple Background Changer</title>
+</head>
+<body>
+
+<button onclick="changeColor()">Change Color</button>
+<button onclick="changeBackgroundImage()">Change Background Image</button>
+<button onclick="resetBackground()">Resume to Normal</button>
+
+<script>
+  const originalColor="white";
+  const originalImage="";
+
+  function changeColor(){
+    document.body.style.backgroundImage=""
+    document.body.style.backgroundColor="blue";
+  }
+  
+  function changeBackgroundImage(){
+    document.body.style.backgroundImage="url('https://static.vecteezy.com/system/resources/thumbnails/070/148/153/small/digital-circuit-background-futuristic-circuits-data-network-concept-design-for-circuit-board-system-cyberpunk-and-computer-free-vector.jpg')"
+    document.body.style.backgroundColor="";
+    document.body.style.backgroundSize = "cover";
+  }
+
+  function resetBackground(){
+    document.body.style.backgroundColor=originalColor;
+    document.body.style.backgroundImage=originalImage;
+  }
+</script>
+</body>
+</html>
+
